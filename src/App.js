@@ -10,11 +10,15 @@ function App() {
   const handleSubmit = () => {
     alert(selectedName);
   };
+  const handleClear = () => {
+    setSelectedName('');
+  };
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: "15px", marginLeft: "5px" }}>
       <label>Enter Name</label>
       <input type="text" value={selectedName} onChange={handleChange} style={{ width: "230px" }} />
-      <button style={{ width: "240px" }}onClick={handleSubmit}>Submit</button>
+      <button style={{ width: "240px" }} onClick={handleSubmit}>Submit</button>
+      <button style={{ width: "240px" }} onClick={handleClear}>Clear</button>
     </div>
   );
 }
